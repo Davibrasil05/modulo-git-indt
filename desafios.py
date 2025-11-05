@@ -24,12 +24,26 @@ def criar_mensagem_commit(funcao_nome):
     return f"Implemente função {funcao_nome}"
 
 
+
 def verificar_tag_valida(tag):
-    """
-    Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
-    Retorna True se o formato for válido, caso contrário False.
-    """
-    pass
+
+    if not tag.startswith("v"):
+        return False
+
+    numeros = tag[1:]
+
+    partes = numeros.split(".")
+
+    if len(partes) != 3:
+        return False
+
+    for parte in partes:
+        if not parte.isdigit():
+            return False
+
+    return True
+
+    
 
 
 def gerar_relatorio_final(funcoes_concluidas):
