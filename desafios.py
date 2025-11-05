@@ -20,15 +20,8 @@ def mostrar_mensagem_inicial():
 def listar_comandos_git_basicos():
     return ["git init", "git add", "git commit", "git status", "git push"]
 
-
 def criar_mensagem_commit(funcao_nome):
-    """
-    Recebe o nome de uma função e retorna uma mensagem de commit padronizada.
-    Exemplo:
-    criar_mensagem_commit("listar_comandos_git_basicos") ->
-    "Implementa função listar_comandos_git_basicos"
-    """
-    pass
+    return f"Implemente função {funcao_nome}"
 
 
 def verificar_tag_valida(tag):
